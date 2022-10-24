@@ -1,0 +1,50 @@
+Pregunta 1
+Implementar la función get_avg que calcule el promedio de una lista de números:
+
+def get_avg(lista):
+  lista = [10, 40, 20, 45, 25, 35, 15]
+  pass
+La función get_avg retorna un float.
+
+Asimismo implementar un decorador que permita imprimir los siguientes mensajes:
+
+Inicio del cálculo del promedio de la lista de números.
+El cálculo ha finalizado.
+Entre ambos mensajes debe realizarse el cálculo del promedio de números.
+
+Pregunta 2
+Escriba un programa que dada una entrada numérica por el usuario, ingrese a una función que duplique el valor y sea retornado en forma de string o cadena. Utilice tipos tanto para las variables como para las funciones.
+
+Pregunta 3
+Cree una función con anotaciones, que tome una palabra y duplique sus letras y las retorne en una lista.
+
+Ejemplo:
+
+Ingrese una palabra: hola
+
+Retorna: ['h','h','o','o','l','l','a','a']
+
+Pregunta 4
+Dada la función "calc_par_impar" que retorna un booleano, dependiendo si el número ingresado es par o impar, cree un decorador que imprima que tipo de número a recibido la función.
+
+def calc_par_impar(n):
+    if n % 2 == 0:
+        return True
+    return False
+Problema 5
+Cree una función decoradora deco1 que muestre el siguiente flujo, para cualquier número ingresado, por ejemplo para el número 30:
+
+Hola, estoy decorando esta función.
+
+Ingresaste el número 30
+
+Terminé de decorar
+
+def deco1(funcParametro):
+  pass
+
+@deco1
+def mostrar(n):
+    print("Ingresaste el número", n)
+
+mostrar(30)
