@@ -15,7 +15,7 @@ Entre ambos mensajes debe realizarse el cálculo del promedio de números.
 '''
 
 def get_avg(my_list:list) -> float:
-    total = 0
+    total : int = 0
     for i in my_list:
         total += i
 
@@ -49,9 +49,10 @@ Retorna: ['h','h','o','o','l','l','a','a']
 '''
 
 def exercise_3(word:str) -> list:
-    my_list = []
+    my_list : list = []
     for i in word:
-        my_list.append(i*2)
+        my_list.append([j*2 for j in i])
+        # my_list.append(i)
 
     return my_list
 
