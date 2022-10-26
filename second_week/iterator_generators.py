@@ -9,6 +9,9 @@ José : 20
 Juan : 18
 '''
 
+from turtle import st
+
+
 def notes(names:list, notes:list):
     for i,j in zip(names, notes):
         print(i, ":", j)
@@ -97,38 +100,34 @@ Implementar registrar_aprobados como generador y que su único parametro de entr
 '''
 
 def registrar_aprobados(new_tuple):
-    total_student = []
     for student, notes in new_tuple:
 
         if notes < 11:
-            qualification = f'{student} : {notes} Desaprobado'
+            qualification = f'{student} : {notes} (Desaprobado)'
             yield qualification
 
         elif notes > 16:
-            qualification = f'{student} : {notes} Destacado'
+            qualification = f'{student} : {notes} (Destacado)'
             yield qualification
 
         else:
-            qualification = f'{student} : {notes} Aprobado'
+            qualification = f'{student} : {notes} (Aprobado)'
             yield qualification
 
 
-        total_student.append(qualification)
-
-    return total_student
-
-
-
+    return qualification
+    # for num, alm in enumerate(qualification, start=0):
+    #     print(num, '->', alm)
 
 
 notas = [15, 20, 18, 11, 4, 7, 14, 13 ,1 ,9, 10]
 alumnos = ["Marcelo", "Jose", "Juan", "Marco", "María", "Ricardo", "Liz", "Diego", "Roberto", "Martin", "Álvaro"]
 alumnos_notas = zip(alumnos, notas)
 
-
 test = registrar_aprobados(alumnos_notas)
+for number, student in enumerate(test, start=1):
+    print(number, '->', student)
 
-for i in test:
-    print(i)
+
 
 # print(registrar_aprobados(alumnos_notas))
