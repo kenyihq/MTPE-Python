@@ -4,4 +4,10 @@ Escriba un programa de Python para listar todos los archivos en un directorio en
 '''
 
 import os
-print(os.)
+
+my_directory = os.listdir('./')
+print(type(my_directory))
+
+with open("listar.txt", "w", encoding="utf8") as file:
+    for row in my_directory:
+        file.write(f"{row}\n")

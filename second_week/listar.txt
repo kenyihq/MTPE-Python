@@ -1,0 +1,13 @@
+dataset
+decoradores.py
+exercises.py
+files.py
+home_work.txt
+iterator_generators.py
+listar.txt
+practice_1.py
+read_csv.py
+test.py
+test_poo.py
+unit_test.py
+__pycache__
